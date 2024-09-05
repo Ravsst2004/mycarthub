@@ -1,10 +1,12 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import Modal from "./components/Modal";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
+import CartContextProvider, { CartContext } from "./store/CartContext";
 
 export default function App() {
   const modalDialog = useRef();
+  const { items } = useContext(CartContext);
 
   const openModal = () => {
     modalDialog.current.open();
@@ -13,15 +15,23 @@ export default function App() {
   const cartBox = (
     <div className="flex flex-col gap-2 w-96">
       <h1 className="text-3xl font-bold text-yellow-50">Your Cart</h1>
-      <p className="text-lg">No Items in cart</p>
-      <div className="bg-[#FBD392] p-2 rounded flex justify-between">
-        <h1>Classic blue gown</h1>
-        <div className="flex justify-between gap-2">
-          <button>+</button>
-          <p>1</p>
-          <button>-</button>
-        </div>
-      </div>
+      {items && items.length > 0 ? (
+        items.map((item) => (
+          <div
+            key={item.id}
+            className="bg-[#FBD392] p-2 rounded flex justify-between"
+          >
+            <h1>{item.name}</h1>
+            <div className="flex justify-between gap-2">
+              <button>+</button>
+              <p>{item.quantity}</p>
+              <button>-</button>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p className="text-lg">No items in cart</p>
+      )}
       <p className="text-end">Total: $0</p>
     </div>
   );
