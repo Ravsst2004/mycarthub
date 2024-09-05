@@ -6,7 +6,7 @@ export default function CartProduct({ product }) {
         <h1 className="font-bold text-yellow-200 text-xl">{product.name}</h1>
         <p className="text-yellow-100">${product.price}</p>
         <p className="text-yellow-50 text-justify">{product.description}</p>
-        <p className="flex justify-end">
+        <p className="flex justify-end mt-4">
           <button className="text-black font-semibold bg-[#f9bd5d] w-fit p-2 rounded-md">
             Add to cart
           </button>
