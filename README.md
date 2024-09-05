@@ -1,8 +1,3 @@
-# React + Vite
+# MyCartHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+MyCartHub is a simple online shopping platform that allows you to effortlessly add your favorite products to the cart with just one click. Browse through a variety of products and easily add them to your cart. Enjoy a quick and efficient shopping experience without any complicated steps—just pick your products and add them to your cart.
