@@ -17,7 +17,7 @@ export default function App() {
   }, 0);
 
   const cartBox = (
-    <div className="flex flex-col gap-2 w-96">
+    <div className="flex flex-col gap-2 w-60 sm:w-96">
       <h1 className="text-3xl font-bold text-yellow-50">Your Cart</h1>
       {items && items.length > 0 ? (
         items.map((item) => (
@@ -26,7 +26,6 @@ export default function App() {
             className="bg-[#FBD392] p-2 rounded flex justify-between"
           >
             <h1>{item.name}</h1>
-            {console.log(item.quantity)}
             <div className="flex justify-between gap-2">
               <button onClick={() => handleUpdateItemQuantity(item.id, -1)}>
                 -

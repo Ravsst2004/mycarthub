@@ -28,7 +28,7 @@ const Modal = forwardRef(function Modal({ children }, ref) {
     <dialog
       ref={modalDialog}
       onClick={handleClose}
-      className="absolute bg-[#D3B17B] p-2 rounded-lg overflow-hidden"
+      className=" bg-[#D3B17B] p-2 rounded-lg"
     >
       {children}
       <div className="flex justify-end mt-2">
