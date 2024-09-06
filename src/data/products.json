@@ -2,63 +2,63 @@
   {
     "id": 1,
     "name": "Sophisticated blue tuxedo",
-    "image": "/public/product (1).jpg",
+    "image": "/image/product (1).jpg",
     "price": 299.99,
     "description": "A sharp, tailored blue tuxedo for formal events. Made from premium fabric, it features a modern fit and sleek design, offering both elegance and comfort in every detail."
   },
   {
     "id": 2,
     "name": "Classic gray box tuxedo",
-    "image": "/public/product (2).jpg",
+    "image": "/image/product (2).jpg",
     "price": 349.99,
     "description": "A timeless gray tuxedo with a box cut. Perfect for weddings or formal business events, it combines classic tailoring with a refined, professional look that never goes out of style."
   },
   {
     "id": 3,
     "name": "Luxury black tuxedo",
-    "image": "/public/product (3).jpg",
+    "image": "/image/product (3).jpg",
     "price": 399.99,
     "description": "A luxury black tuxedo with a slim fit, designed for special occasions. It features a satin lapel and high-quality fabric, offering a polished look that makes a bold statement."
   },
   {
     "id": 4,
     "name": "Luxury royal dress",
-    "image": "/public/product (4).jpg",
+    "image": "/image/product (4).jpg",
     "price": 499.99,
     "description": "An exquisite royal blue gown designed to turn heads. With its lace detailing and flowing fabric, it provides a flattering silhouette that blends grace and sophistication."
   },
   {
     "id": 5,
     "name": "Venorous red dress",
-    "image": "/public/product (5).jpg",
+    "image": "/image/product (5).jpg",
     "price": 459.99,
     "description": "A bold red dress with an elegant, flowing design. Crafted from luxurious fabric, it offers a form-fitting silhouette that is perfect for glamorous events and special evenings."
   },
   {
     "id": 6,
     "name": "Dark green royal dress",
-    "image": "/public/product (6).jpg",
+    "image": "/image/product (6).jpg",
     "price": 479.99,
     "description": "A regal dark green gown perfect for formal occasions. Combining luxury fabric and modern design, it brings both style and elegance to any prestigious event or gathering."
   },
   {
     "id": 7,
     "name": "Classic blue gown",
-    "image": "/public/product (7).jpg",
+    "image": "/image/product (7).jpg",
     "price": 419.99,
     "description": "A timeless blue gown with a minimalist design. Ideal for formal occasions, it features a flowing silhouette that offers both comfort and a classic, sophisticated appearance."
   },
   {
     "id": 8,
     "name": "Goldy brown gown",
-    "image": "/public/product (8).jpg",
+    "image": "/image/product (8).jpg",
     "price": 449.99,
     "description": "A stunning gold-brown gown with elegant detailing. The luxurious fabric and unique color make it a standout choice for special events, providing a touch of regal sophistication."
   },
   {
     "id": 9,
     "name": "Luxury gown",
-    "image": "/public/product (9).jpg",
+    "image": "/image/product (9).jpg",
     "price": 529.99,
     "description": "An opulent luxury gown that captures attention. The intricate detailing and flowing fabric create a stunning look, ensuring you make an unforgettable entrance at any event."
   }

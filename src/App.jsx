@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import Modal from "./components/Modal";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
-import CartContextProvider, { CartContext } from "./store/CartContext";
+import { CartContext } from "./store/CartContext";
 
 export default function App() {
   const modalDialog = useRef();
