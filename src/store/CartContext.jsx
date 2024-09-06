@@ -4,6 +4,7 @@ import products from "../data/products.json";
 export const CartContext = createContext({
   items: [],
   handleAddItemToCart: () => {},
+  handleUpdateItemQuantity: () => {},
 });
 
 export default function CartContextProvider({ children }) {
@@ -42,9 +43,22 @@ export default function CartContextProvider({ children }) {
     });
   };
 
+  const handleUpdateItemQuantity = (id, amount) => {
+    setShoppingCart((prevState) => {
+      const updatedItems = prevState.items
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + amount } : item
+        )
+        .filter((item) => item.quantity > 0);
+
+      return { items: updatedItems };
+    });
+  };
+
   const CartValue = {
     items: shoopingCart.items,
     handleAddItemToCart,
+    handleUpdateItemQuantity,
   };
 
   return (

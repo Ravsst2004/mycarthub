@@ -6,11 +6,15 @@ import CartContextProvider, { CartContext } from "./store/CartContext";
 
 export default function App() {
   const modalDialog = useRef();
-  const { items } = useContext(CartContext);
+  const { items, handleUpdateItemQuantity } = useContext(CartContext);
 
   const openModal = () => {
     modalDialog.current.open();
   };
+
+  const total = items.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
 
   const cartBox = (
     <div className="flex flex-col gap-2 w-96">
@@ -22,17 +26,22 @@ export default function App() {
             className="bg-[#FBD392] p-2 rounded flex justify-between"
           >
             <h1>{item.name}</h1>
+            {console.log(item.quantity)}
             <div className="flex justify-between gap-2">
-              <button>+</button>
+              <button onClick={() => handleUpdateItemQuantity(item.id, -1)}>
+                -
+              </button>
               <p>{item.quantity}</p>
-              <button>-</button>
+              <button onClick={() => handleUpdateItemQuantity(item.id, +1)}>
+                +
+              </button>
             </div>
           </div>
         ))
       ) : (
         <p className="text-lg">No items in cart</p>
       )}
-      <p className="text-end">Total: $0</p>
+      <p className="text-end">Total: ${total}</p>
     </div>
   );
 
