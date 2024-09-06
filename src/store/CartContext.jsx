@@ -50,6 +50,10 @@ const shoopingCartReducer = (state, action) => {
 
     localStorage.setItem("cartItems", JSON.stringify(updatedItems));
 
+    if (updatedItems.length <= 0) {
+      localStorage.removeItem("cartItems");
+    }
+
     return { items: updatedItems };
   }
 };
