@@ -34,6 +34,8 @@ const shoopingCartReducer = (state, action) => {
       });
     }
 
+    localStorage.setItem("cartItems", JSON.stringify(updatedItems));
+
     return { items: updatedItems };
   }
 
@@ -46,6 +48,8 @@ const shoopingCartReducer = (state, action) => {
       )
       .filter((item) => item.quantity > 0);
 
+    localStorage.setItem("cartItems", JSON.stringify(updatedItems));
+
     return { items: updatedItems };
   }
 };
@@ -54,7 +58,7 @@ export default function CartContextProvider({ children }) {
   const [shoopingCartState, shoopingCartDispatch] = useReducer(
     shoopingCartReducer,
     {
-      items: [],
+      items: JSON.parse(localStorage.getItem("cartItems")) || [],
     }
   );
 
@@ -74,7 +78,10 @@ export default function CartContextProvider({ children }) {
   };
 
   const CartValue = {
-    items: shoopingCartState.items,
+    items:
+      shoopingCartState.items.length > 0
+        ? shoopingCartState.items
+        : JSON.parse(localStorage.getItem("cartItems")) || [],
     handleAddItemToCart,
     handleUpdateItemQuantity,
   };
