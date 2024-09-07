@@ -5,6 +5,10 @@ import { useContext } from "react";
 export default function Navbar({ openModal }) {
   const { items } = useContext(CartContext);
 
+  const totalProductInCart = items.reduce((total, item) => {
+    return total + item.quantity;
+  }, 0);
+
   return (
     <nav className="flex items-center justify-between p-4 text-2xl text-[#EDBF68]">
       <h1 className="font-bold">MyCartHub</h1>
@@ -12,7 +16,7 @@ export default function Navbar({ openModal }) {
         {items.length > 0 && (
           <div className="absolute left-3 bottom-2">
             <p className="flex h-1 w-1 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">
-              {items.length}
+              {totalProductInCart}
             </p>
           </div>
         )}
